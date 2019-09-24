@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <div class="padre">
+        <header class="header ">
+            <div class="menu margen-interno">
+                <div class="logo">
+                        <a href="inicio.html">HEALING</a>
+                </div>
+                <nav class="nav">
+                        <a href="inicio.html"><i class="fas fa-home"></i><span class="off">Inicio</span></a>
+                        <a href="#"><i class="fas fa-user-friends"></i><span class="off">Nosotros</span></a>
+                        <a href="#"><i class="fas fa-comments"></i><span class="off">Servicios</span></a>
+                        <a href="#"><i class="fas fa-file-alt"></i><span class="off">Noticias</span></a>
+                        <a href="formulario.html"><i class="fas fa-envelope"></i><span class="off">Contacto</span></a>
+                    </nav>
+                <div class="social">
+                    <div><a href="#"><i class="fab fa-facebook"></i></a></div>
+                    <div><a href="#"><i class="fab fa-twitter"></i></a></div>
+                </div>
+            </div>
+            <div class="texto-principal margen-interno">
+               
+            </div>
+        </header>
+        <div class="contact-form" id="form">
+                <h1>Contacto</h1>
+                <div class="txtb">
+                  <label>Nombre :</label>
+                  <input type="text" id="name" name="name" value="" placeholder="Ingresa tu Nombre">
+                </div>
+            
+                <div class="txtb">
+                  <label>Correo :</label>
+                  <input type="text" id="email" name="email" value="" placeholder="Ingresa tu Correo">
+                </div>
+            
+                <div class="txtb">
+                  <label>Telefono :</label>
+                  <input type="text" id="phone" name="phone" value="" placeholder="Ingresa tu Telefono">
+                </div>
+            
+                <div class="txtb">
+                  <label>Mensaje :</label>
+                  <textarea id="mesaje" name="mesaje"></textarea>
+                </div>
+                <button type="button" onclick="validarFormulario()">Enviar</button>
+        </div>
+        <footer class="footer margen-interno">
+            <span class="cajaFooter  color1"> Email: loquesea@putotrabajo.com</span>
+            <span class="cajaFooter  "> Contacto: +56 (8) -  2350 59 00</span>
+        </footer>     
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
