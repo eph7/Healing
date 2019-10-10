@@ -7,13 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Proyecto Practica</title>
     <link href="https://fonts.googleapis.com/css?family=Lora|Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="inicio.css">
 </head>
 
 <body>
+    <!-- contenedor principal -->
     <div class="padre">
-        <header class="header ">
+        <!-- barra navegacion -->
+        <header class="header sticky-top">
             <div class="menu margen-interno">
                 <div class="logo">
                     <a href="inicio.html">HEALING</a>
@@ -29,26 +32,49 @@
                     <div><a href="#"><i class="fab fa-facebook"></i></a></div>
                     <div><a href="#"><i class="fab fa-twitter"></i></a></div>
                 </div>
-
-        </header>
-        <div class="slider">
-                <ul>
-                    <li><img src="imagenes/si1.jpg" alt=""></li>
-                    <li><img src="imagenes/si2.jpg" alt=""></li>
-                    <li><img src="imagenes/si3.jpg" alt=""></li>
-                    <li><img src="imagenes/si4.jpg" alt=""></li>
-                </ul>
-
             </div>
+        </header>
+        <!-- slider -->
+        
+        <div id="carouselExampleIndicators" class="carousel slide margen-interno" data-ride="carousel" >
+                <h1>Venta de Productos para recuperacion</h1>  
 
-            
+                <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active" style="height: 80vh">
+                    <img class="d-block img-fluid" src="imagenes/si1.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item" style="height: 80vh">
+                    <img class="d-block img-fluid" src="imagenes/si2.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item" style="height: 80vh">
+                    <img class="d-block img-fluid" src="imagenes/si3.jpg" alt="Third slide">
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+                </a>
+        </div>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi id doloribus eius, deleniti in quisquam accusantium debitis magni reiciendis magnam fugiat tenetur veniam nesciunt quia rem totam vero. Vitae, officia!</p>
+        <!-- articulos -->
         <section class="section margen-interno">
+            <!-- articulos imagenes -->
             <div class="articulos">
                 <article class="article">
-                    <div class="ajustar"><img src="imagenes/1.jpg" alt=""></div>
-                    <p>
-                        <h2>Collar Cervical Largo</h2>
-                    </p>
+                    <div class="ajustar"><img src="imagenes/1.jpg"  alt=""></div>
+                        <p>
+                            <h2>Collar Cervical Largo</h2>
+                        </p>
                     <a href="#">Ver mas...</a>
                 </article>
                 <article class="article">
@@ -72,6 +98,7 @@
                     </p>
                     <a href="#">Ver mas...</a>
                 </article>
+                <!-- menu navegacion -->
                 <nav class="navegacion">
                     <a href="#">Inicio</a>
                     <a href="#">1</a>
@@ -81,21 +108,28 @@
                     <a href="#">Final</a>
                 </nav>
             </div>
+            <!-- menu lateral -->
             <aside class="aside">
                 <div class="publicidad">
                     <div class="menuLateralTitulo_fijo">Categoría</div>
-                    <h4><a href="catalogocuello.html">Cuello/Espalda </a></h3>
-                        <h4><a href="catalogorodilla.html">Rodilla</a></h3>
-                            <h4><a href="catalogohombro.html">Hombro/Codo</a></h3>
-                                <h4><a href="catalogomano.html">Mano/Muñequera</a></h3>
+                    <h3><a href="catalogocuello.html">Cuello/Espalda </a></h3>
+                        <h3><a href="catalogorodilla.html">Rodilla</a></h3>
+                            <h3><a href="catalogohombro.html">Hombro/Codo</a></h3>
+                                <h3><a href="catalogomano.html">Mano/Muñequera</a></h3>
                 </div>
             </aside>
         </section>
+        <!-- barra inferior -->
         <footer class="footer margen-interno">
-            <span class="cajaFooter  color1"> Email: Healing@Healing.com</span>
-            <span class="cajaFooter  "> Contacto: +56 (8) -  2350 59 00</span>
+                <h1>Informacion de Contacto</h1>
+                <div><i class="fas fa-mobile-alt"></i><span class="cajaFooter "> Healing@Healing.com</span></div>
+                <div><i class="fas fa-mobile-alt"></i><span class="cajaFooter  "> +56 (8) - 2350 59 00</span></div>
         </footer>
     </div>
+    <!-- llamar scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

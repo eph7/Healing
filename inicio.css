@@ -1,3 +1,6 @@
+/*----------------------------------------------------
+ALL
+----------------------------------------------------*/
 * {
     margin: 0px;
     padding: 0px;
@@ -12,6 +15,9 @@ a {
     text-decoration: none;
 }
 
+/*----------------------------------------------------
+CONTENEDOR PRINCIPAL
+----------------------------------------------------*/
 .padre {
     display: flex;
     flex-flow: column nowrap;
@@ -21,8 +27,16 @@ a {
     padding: 0 50px;
 }
 
+/*----------------------------------------------------
+BARRA NAVEGACION
+----------------------------------------------------*/
+.sticky-top{
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
 .header {
-    background: url(imagenes/Ondaazul.jpg);
     background-position: center;
     background-attachment: contain;
     background-size: cover;
@@ -31,7 +45,7 @@ a {
 }
 
 .menu {
-    background: rgb(0, 0, 0, .1);
+    background: rgba(12, 0, 0, 0.699);
     display: flex;
     flex-flow: row nowrap;
     height: 60px;
@@ -83,38 +97,46 @@ a {
     color: #343434;
 }
 
-.texto-principal {
-    /* background: #ffba92; */
+/* .texto-principal {
+    background: #ffba92;
     height: 580px;
     display: flex;
     align-items: center;
-}
+} */
 
-h1 {
+/* h1 {
     font-family: 'lora', serif;
     font-size: 21px;
     color: #fff;
     font-weight: 300;
     text-align: center;
     line-height: 1.6;
+} */
+
+/*----------------------------------------------------
+ARTICULOS 
+----------------------------------------------------*/
+h1{
+    text-align: center;
 }
 
 .section {
-    background: #f7f7f7;
+    width: 100%;
+    background: rgb(240, 11, 11);
     display: flex;
-    flex-direction: row-reverse;
+    margin: auto;
 }
 
+/* articulos imagenes */
 .articulos {
     background: #f7f7f7;
-    flex: 2 1 70%;
+    flex: 2 1 50%;
     display: flex;
     flex-flow: row wrap;
-    margin-left: 15px;
+    margin: auto;
 }
 
 .article {
-    flex: 1 1 40%;
     color: #444;
     font-size: 13px;
     letter-spacing: 1px;
@@ -122,6 +144,7 @@ h1 {
     flex: 1 1 45%;
     background: #ececec;
 }
+
 
 .article img {
     width: 200px;
@@ -143,20 +166,15 @@ h1 {
     background: #546cc3;
 }
 
-h3 {
-    color: #202040;
-    font-size: 13px;
-    padding: 10px 0;
-    margin-top: -80px;
-}
-
 h2 {
     color: #202040;
     text-transform: uppercase;
     font-size: 20px;
     padding: 0px 0 10px;
+    text-align: center;
 }
 
+/* menu inferior */
 .navegacion {
     background: #000;
     flex: 1 1 100%;
@@ -171,85 +189,84 @@ h2 {
     letter-spacing: 2px;
 }
 
+/* menu lateral */
+
 aside {
     /* background: #e42c64; */
-    flex: 1 1 30%;
-    margin: 10px 5px 10px 0;
-    align-items: stretch;
+    /* flex: 1 1 30%; */
+    margin: 10px auto;
+    /* align-items: stretch; */
+    background: yellowgreen;
+}
+
+
+h3 {
+    padding: 3px;
+    font-size: 20px;
+}
+
+
+.publicidad {
+    background: #f4ff61;
+    /* margin-right: 170px; */
 }
 
 .menuLateralTitulo_fijo {
-    background-color: #009FDE;
+    text-transform: uppercase;
+    background: #009FDE;
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 200;
-    width: 200px;
+    width: 100%;
     height: 30px;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 120%;
     color: #FFFFFF;
     text-align: left;
-    outline: none;
     -webkit-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
-    margin: 10px 0;
+    /* margin: 10px 0; */
     padding: 5px;
 }
 
-.aside img {
-    width: 100%;
-}
 
-h4 {
+/* h4 {
     background: #ecf4f3;
     color: #fff;
     padding: 10px;
     text-transform: uppercase;
-}
+} */
 
-.publicidad {
-    /* background: #f4ff61; */
-    margin-right: 170px;
-}
+
+
+/*----------------------------------------------------
+BARRA INFERIOR
+----------------------------------------------------*/
 
 .footer {
-    background: #000;
-    display: flex;
+    background: rgb(255, 255, 255);
     justify-content: start;
     margin-top: 10px;
 }
 
 .cajaFooter {
     font-family: 'Open Sans', Arial, sans-serif;
-    /* font-size: 11px; */
     font-size: 14px;
-    border-color: #DDDDDD;
-    border-width: 1px;
-    border-radius: 5px;
-    border-style: solid;
-    padding: 14px 10px;
-    margin: 10px;
-    display: inline-block;
-    white-space: nowrap;
-    background-color: #FFF;
-}
-
-.color1 {
-    color: #64b2cd;
-}
-
-.pie {
-    /* background: #f7b71d; */
-    text-align: center;
-}
-
-.pie a {
-    color: #fff;
     font-size: 11px;
     text-transform: uppercase;
     padding: 0 10px;
     letter-spacing: 2px;
+    margin: 10px;
+    display: inline-block;
+    white-space: nowrap;
 }
+
+
+
+
+/*----------------------------------------------------
+MEDIA QUERY
+----------------------------------------------------*/
 
 @media all and (max-width: 1120px) {
     .section {
@@ -266,9 +283,7 @@ h4 {
     .texto-principal {
         height: 450px;
     }
-    h1 {
-        font-size: 15px;
-    }
+
     .aside {
         display: none;
     }
@@ -281,6 +296,8 @@ h4 {
     .aside {
         display: none;
     }
+
+    
 }
 
 @media all and (max-width: 650px) {
@@ -293,61 +310,16 @@ h4 {
     .aside {
         display: none;
     }
-
- @media all and (max-width: 528px) {
-        .footer {
-            display: none;
-         }
-        
-}
-
-   
-}
-
-@media all and (max-width: 400px) {
-    .aside {
-        display: none;
+    h1 {
+        font-size: 30px;
     }
    
 }
 
-
-.slider{
-    width: 95%;
-    margin: auto;
-    overflow: hidden;
+@media all and (max-width: 350px) {
+   
+   .footer{
+       display: none;
+   }
 }
 
-.slider ul{
-    display: flex;
-    padding:0;
-    width: 400%;
-
-    animation: cambio 10s infinite alternate;
-    animation-timing-function: ease-out;
-}
-
-.slider:nth-child(2) ul{
-    animation-timing-function: step-start;
-}
-.slider li{
-    width: 100%;
-    list-style:none;
-}
-.slider img{
-    width: 100%;
-}
-
-@keyframes cambio {
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
-
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-    
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-
-    75% {margin-left: -300%;}
-    100% {margin-left: -300%;}
-}
