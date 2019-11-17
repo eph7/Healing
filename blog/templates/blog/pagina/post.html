@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block titulo %}
+{{detalle_post.title}}
+{% endblock titulo %}
+
+{% block contenedor %}
+<hr class="featurette-divider">
+
+<div class="container">
+{% block postear %}
+<div class="row featurette">
+        <div class="col-md-7 order-md-2">
+                <h2 style="font-size: 25px; color: brown">{{detalle_post.descripcion}}</h2>
+                <h2 class="text_right mar25b">Código: CC-614</h2>
+                <div>
+                    <div class="grid_12 texto_gral">
+                        <span style="font-size:14px"><span style="font-family:tahoma,geneva,sans-serif">{{detalle_post.text | safe}}<br><br><strong>Composición:</strong>&nbsp; </span></span><br>
+                        <ul><br>
+                            <li><span style="font-size:14px"><span style="font-family:tahoma,geneva,sans-serif">Elástico: 21% Nylon. </span></span>
+                            </li><br>
+                            <li><span style="font-size:14px"><span style="font-family:tahoma,geneva,sans-serif">Elástico libre de latex: 73% Polyester / 6% Spandex.
+                            </span></span>
+                            </li>
+                            <li><span style="font-size:14px"><span style="font-family:tahoma,geneva,sans-serif">Felpas y Velcro: 100% Nylon.</span></span>
+                            </li><br>
+                            <li><span style="font-size:14px"><span style="font-family:tahoma,geneva,sans-serif">Barras Dorsales: Polipropileno copo limero. </span></span>
+                            </li><br>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="featurette-image img-fluid mx-auto" src="{{detalle_post.imagen.url}}" alt="Generic placeholder image">
+        </div>
+</div>
+{% endblock postear %}
+</div>
+
+<hr class="featurette-divider">
+{% endblock contenedor %}

@@ -1,0 +1,75 @@
+{% extends 'mantenedor.html' %}
+
+{% block titulo %}
+  Biblioteca.dev | Listado de Autores
+{% endblock titulo %}
+
+<!-- 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 search">
+                <form method="get">
+                    <div id="custom-search-input">
+                        <div class="input-group col-md-12">
+                            <input type="text" class="form-control" placeholder="Buscar..." name="buscar" value="{{ request.GET.buscar }}">
+                            <span class="input-group-list">
+                                <i class="icon icon-search"></i>
+                                <button type="submit" class="boton btn-success">Buscar</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> -->
+
+    {% block body %}
+    {% if post_listar %}
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">Listado de Posts</strong>
+        </div>
+        <div class="table-stats order-table ov-h">
+            <table class="table">
+                <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Categoria</th>
+                      <th>Estado</th>
+                      <th>Titulo</th>
+                      <!-- <th>Slug</th>
+                      <th>Descripcion</th> -->
+                      <!-- <th>Contenido</th>
+                      <th>Imagen</th> -->
+                      <th>Fecha de Creacion</th>
+                      <th>Fecha de Publicacion</th>
+                      <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  {% for post in post_listar%}
+                    <tr>
+                      <td>{{post.id}}</td>
+                      <td>{{post.categoria}}</td>
+                      <td>{{post.estado}}</td>
+                      <td>{{post.title}}</td>
+                      <!-- <td>{{post.slug}}</td>
+                      <td>{{post.descripcion}}</td>
+                      <td>{{post.text}}</td>
+                      <td>{{post.imagen}}</td> -->
+                      <td>{{post.created_date}}</td>
+                      <td>{{post.published_date}}</td>
+                      <td>
+                        <a href="{% url 'blog:editar_post' post.id %}" class="btn btn-primary">Editar</a>
+                        <a href="{% url 'blog:eliminar_post' post.id %}" class="btn btn-danger">Eliminar</a>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% else %}
+    <h1>No existe Post Registrado </h1>
+    {% endif %}
+    {% endblock body %}
