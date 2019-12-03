@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
     'blog.usuarios',
-    'rest_framework',
     'import_export',
     'ckeditor',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -74,6 +74,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Healing.wsgi.application'
 
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
+
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -104,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-#Configuracion de ckeditor
+# Configuracion de ckeditor
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',
@@ -132,3 +137,11 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'healing.proyecto@gmail.com'
+EMAIL_HOST_PASSWORD = 'healing1234'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

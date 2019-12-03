@@ -67,7 +67,7 @@ BARRA INFERIOR
 MEDIA QUERY
 ----------------------------------------------------*/
 
-@media all and (max-width: 1120px) {
+/* @media all and (max-width: 1120px) {
     .section {
         flex-direction: column;
     }
@@ -92,9 +92,6 @@ MEDIA QUERY
     .articulos {
         flex-direction: column;
     }
-    /* .aside {
-        display: none;
-    } */
 
     
 }
@@ -121,4 +118,4 @@ MEDIA QUERY
        display: none;
    }
 }
-
+ */
